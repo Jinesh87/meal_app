@@ -12,7 +12,10 @@ A mobile application built with React Native that helps users explore meals, vie
 ## Dependencies
 
 - **[expo](https://expo.dev/)**: Development platform for React Native apps.
-- **[expo-linear-gradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)**: provides a native React view that transitions between multiple colors in a linear direction.
+- **[@react-navigation/native](https://reactnavigation.org/docs/getting-started)**: Routing and navigation for React Native and Expo.
+- **[react-native-screens](https://reactnavigation.org/docs/getting-started#installing-dependencies-into-an-expo-managed-project)**: Installing dependencies into an Expo managed project.
+- **[react-native-safe-area-context](https://reactnavigation.org/docs/getting-started#installing-dependencies-into-an-expo-managed-project/)**: Installing dependencies into an Expo managed project.
+- **[@react-navigation/native-stack](https://reactnavigation.org/docs/native-stack-navigator#installation)**: Stack Navigator provides a way for your app to transition between screens where each new screen is placed on top of a stack.
 
 
 ## Installation and Setup Instructions 
