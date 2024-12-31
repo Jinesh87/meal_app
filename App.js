@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -13,13 +13,29 @@ import FavoritesScreen from './screens/FavoritesScreen';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
+function CategoriesScreenWrapper() {
+  return (
+    <View style={{ flex: 1, backgroundColor: '#3f2f25' }}>
+      <CategoriesScreen />
+    </View>
+  );
+}
+
+function FavoritesScreenWrapper() {
+  return (
+    <View style={{ flex: 1, backgroundColor: '#3f2f25' }}>
+      <FavoritesScreen />
+    </View>
+  );
+}
+
 function DrawerNavigator() {
   return (
     <Drawer.Navigator
       screenOptions={{
         headerStyle: { backgroundColor: '#351401' },
         headerTintColor: 'white',
-        sceneContainerStyle: { backgroundColor: '#3f2f25' },
+       // sceneContainerStyle: { backgroundColor: '#3f2f25' },
         drawerContentStyle: { backgroundColor: '#351401' },
         drawerInactiveTintColor: 'white',
         drawerActiveTintColor: '#351401',
@@ -28,7 +44,7 @@ function DrawerNavigator() {
     >
       <Drawer.Screen
         name="Categories"
-        component={CategoriesScreen}
+        component={CategoriesScreenWrapper}
         options={{
           title: 'All Categories',
           drawerIcon: ({ color, size }) => (
@@ -38,7 +54,7 @@ function DrawerNavigator() {
       />
       <Drawer.Screen
         name="Favorites"
-        component={FavoritesScreen}
+        component={FavoritesScreenWrapper}
         options={{
           drawerIcon: ({ color, size }) => (
             <Ionicons name="star" color={color} size={size} />
